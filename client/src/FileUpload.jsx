@@ -13,7 +13,8 @@ const FileUpload = () => {
                     body: formData
                 }).then(response => response.json())
                     .then(data => {
-                        console.log(data.cid)
+                        console.log("https://ipfs.io/ipfs/" + data.cid);
+                        console.log(data.transactionHash);
                     })
                     .catch(error => {
                         console.error(error);
